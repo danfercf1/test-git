@@ -6,6 +6,7 @@ After=pvpgnserver.service
 [Service]
 User=root
 Restart=always
+ExecStartPre=. /home/daniel/project/update-lo/update-net.sh && /bin/systemctl restart networking
 ExecStart=/usr/local/bin/docker-compose -f /home/daniel/docker/bots/docker-compose.yml up
 ExecStop=/usr/local/bin/docker-compose -f /home/daniel/docker/bots/docker-compose.yml down
 
