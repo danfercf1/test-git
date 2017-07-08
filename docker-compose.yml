@@ -1,7 +1,7 @@
 version: '2'
 services:
   ghost:
-    image: quay.io/danfercf/ghostbot:0.3
+    image: quay.io/danfercf/ghostbot:latest
     volumes:
       - /usr/local/ghost/maps:/usr/local/ghost/maps
       - /usr/local/ghost/replays:/usr/local/ghost/replays
@@ -11,7 +11,7 @@ services:
       BOT_MAX_GAMES: 5
       BOT_COMMAND_TRIGGER: .
       BOT_SAVE_REPLAYS: 1
-      BOT_NAME: |cFFFF80FFLMK
+      BOT_NAME: "|cFFFF80FFLMK"
       BOT_SPOOF_CHECK: 1
       BOT_AUTOKICK_PING: 400
       BOT_DEFAULT_MAP: dota
