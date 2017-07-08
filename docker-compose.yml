@@ -1,12 +1,45 @@
 version: '2'
 services:
   ghost:
-    image: "quay.io/danfercf/ghostbot:0.3"
+    image: quay.io/danfercf/ghostbot:0.3
     volumes:
-      - "/usr/local/ghost/maps:/usr/local/ghost/maps"
-      - "/usr/local/ghost/replays:/usr/local/ghost/replays"
+      - /usr/local/ghost/maps:/usr/local/ghost/maps
+      - /usr/local/ghost/replays:/usr/local/ghost/replays
     environment:
-      - SERVEPORT= 6116
-    network_mode: "host"
-    container_name: "ghost"
+      #GENERAL
+      BOT_HOST_PORT: 6116
+      BOT_MAX_GAMES: 5
+      BOT_COMMAND_TRIGGER: .
+      BOT_SAVE_REPLAYS: 1
+      BOT_NAME: |cFFFF80FFLMK
+      BOT_SPOOF_CHECK: 1
+      BOT_AUTOKICK_PING: 400
+      BOT_DEFAULT_MAP: dota
+      ADMIN_PORT: 6113
+      ADMIN_PASSWORD:
+      #GPROXY
+      BOT_GPROXY_RECONNECT: 6117
+      BOT_GPROXY_PORT: 6114
+      BOT_RECONNECT_TIMEOUT: 3
+      #AUTOHOST
+      AUTOHOST_MAX_GAMES: 5
+      AUTO_HOST_PLAYERS: 10
+      AUTOHOST_GAME_NAME: Nioje Asno
+      AUTOHOST_OWNER: danfercf
+      #MYSQL
+      MYSQL_SERVER: 127.0.0.1
+      MYSQL_DB_NAME:
+      MYSQL_USER:
+      MYSQL_PASSWORD:
+      MYSQL_PORT: 3306
+      #BNET
+      BNET_SERVER_HOST: lmkserver.zapto.org
+      BNET_SERVER_ALIAS: LMK SERVER
+      BNET_BOT_USERNAME: LMKBOT
+      BNET_BOT_PASSWORD: 123456
+      BNET_BOT_CHANNEL: Bots
+      BNET_BOT_ADMIN: danfercf
+      BNET_BOT_TRIGGER: .
+    network_mode: host
+    container_name: ghost
     command: ["./ghost.sh"]
