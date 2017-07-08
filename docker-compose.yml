@@ -2,10 +2,9 @@ version: '2'
 services:
   ghost:
     image: "quay.io/danfercf/ghostbot:0.3"
-    volumes: 
-      #- "/usr/local/ghost/maps:/usr/local/ghost/maps"
-      #- "/usr/local/ghost/replays:/usr/local/ghost/replays"
-      - "/usr/local/ghost/:/usr/local/ghost/"
+    volumes:
+      - "/usr/local/ghost/maps:/usr/local/ghost/maps"
+      - "/usr/local/ghost/replays:/usr/local/ghost/replays"
     environment:
       - SERVEPORT= 6116
     network_mode: "host"
