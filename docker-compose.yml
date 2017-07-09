@@ -5,6 +5,7 @@ services:
     volumes:
       - /usr/local/ghost/maps:/usr/local/ghost/maps
       - /usr/local/ghost/replays:/usr/local/ghost/replays
+      - /usr/local/ghost/mapcfgs:/usr/local/ghost/mapcfgs
     environment:
       #GENERAL
       BOT_HOST_PORT: 6116
