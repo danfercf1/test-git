@@ -6,7 +6,7 @@
 
 3. Execute installer:
 
-    `cd installer/mapcfgs/ && sudo mkdir -p /usr/local/ghost/mapcfgs/ && sudo ./install.sh`
+    `sudo mkdir -p /usr/local/ghost/mapcfgs/ && cd installer/ && sudo ./install.sh`
 
 3. Start the service:
     
