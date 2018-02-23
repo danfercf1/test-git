@@ -1,4 +1,4 @@
-# Docker service for setup ghost bots (ARM7)
+# Docker service for setup ghost bots (ARM7).
 ### Install
 1. Enable the service:
 
